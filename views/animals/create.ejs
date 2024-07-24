@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE</title>
+</head>
+<body>
+    <%- include('../partials/navigation') %>
+    <h1>Create an animal</h1>
+    <form action="/animals" method="POST">
+        <label for="name">Name : </label>
+        <input type="text" name="name" id="name" required>
+        <label for="habitat">Habitat : </label>
+        <input type="text" name="habitat" id="habitat" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

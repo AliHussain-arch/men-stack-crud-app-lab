@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIEW</title>
+</head>
+<body>
+    <%- include('../partials/navigation') %>
+    <h1>Edit an animal</h1>
+    <h2>ID: <%=animal.id%> </h2>
+    <h2>NAME: <%=animal.name%> </h2>
+    <h2>HABITAT: <%=animal.habitat%> </h2>
+    <form action="/animals/<%= animal._id %>/?_method=PUT" method="POST">
+        <label for="newName">New name : </label>
+        <input type="text" name="newName" id="newName" required>
+        <label for="newHabitat">New habitat : </label>
+        <input type="text" name="newHabitat" id="newHabitat" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

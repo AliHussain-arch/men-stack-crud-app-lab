@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIEW</title>
+</head>
+<body>
+    <%- include('../partials/navigation') %>
+    <h1>Animal view</h1>
+    <h2>ID: <%=animal.id%> </h2>
+    <h2>NAME: <%=animal.name%> </h2>
+    <h2>HABITAT: <%=animal.habitat%> </h2>
+    <form action="/animals/<%= animal._id %>/?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+    <a href="/animals/<%=animal.id%>/edit"><button>EDIT</button></a>
+</body>
+</html>
